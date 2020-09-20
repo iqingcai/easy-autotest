@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Custom suite" verbose="1" thread-count="3" parallel="classes" configfailurepolicy="continue" data-provider-thread-count="3">
+    <test name="Cucumber Test" annotations="JDK" preserve-order="true">
+        <classes>
+            <class name="com.qatest.demo.cucumber.runner.RunClass"/>
+        </classes>
+    </test>
+</suite>
