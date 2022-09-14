@@ -1,5 +1,6 @@
 package com.qatest.demo.cucumber.steps;
 
+import com.qatest.demo.utils.TestContext;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import lombok.extern.log4j.Log4j;
@@ -15,6 +16,7 @@ public class Hooks {
     public void before(){
 
         log.info("before....每个Scenario之前都会运行");
+        TestContext.getTestContext();
 
     }
 

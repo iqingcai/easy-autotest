@@ -11,16 +11,20 @@ import lombok.extern.log4j.Log4j;
 @Getter
 public class TestContext {
 
+    private PropertiesUtil propertiesUtil = null;
     private static TestContext testContext = null;
-
-    private ConfigUtil configUtil = null;
-
-    private String url;
+    public static Config config = null;
 
     public void init() {
-        if(configUtil == null)
-            configUtil = new ConfigUtil();
-        url = ConfigUtil.getProperties("project.url");
+
+        if(config == null){
+            String path = EnvConfigUtil.configEnv;
+            log.info("配置文件路径： " + path);
+            propertiesUtil = new PropertiesUtil(path);
+            config = new Config();
+            propertiesUtil.propertiesToObject(config, path);
+        }
+
     }
 
 

@@ -21,8 +21,6 @@ public class Framework {
 
     private String test = "aaaaa";
 
-    private String url = TestContext.getTestContext().getUrl();
-
     private String random = TestConstants.getRandomString(5);
 
     private int a;

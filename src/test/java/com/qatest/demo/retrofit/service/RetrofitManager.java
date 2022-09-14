@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class RetrofitManager {
 
     private static final Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl(TestContext.getTestContext().getUrl())
+            .baseUrl(TestContext.config.getUrl())
             .addConverterFactory(GsonConverterFactory.create())
             .client(getOkHttpClient())
             .build();

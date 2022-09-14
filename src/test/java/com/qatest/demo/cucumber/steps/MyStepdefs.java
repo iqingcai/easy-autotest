@@ -23,7 +23,7 @@ public class MyStepdefs {
         log.info(framework.getA());
         log.info(framework.getB());
         Thread.sleep(1000);
-        log.info(TestContext.getTestContext().getUrl());
+        log.info(TestContext.config.getUrl());
     }
 
     @Then("给一个参数 {int} 和 {int}")

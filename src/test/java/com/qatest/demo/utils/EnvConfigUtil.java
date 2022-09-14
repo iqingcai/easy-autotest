@@ -10,7 +10,7 @@ import java.util.Properties;
  */
 
 @Log4j
-public class ConfigUtil {
+public class EnvConfigUtil {
 
     public static final String envConfig = FileUtil.getFilePath("configEnv.properties");
     public static final String configEnv = FileUtil.getFilePath(getProperties(envConfig, "env"));
